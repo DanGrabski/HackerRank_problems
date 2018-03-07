@@ -1,0 +1,7 @@
+Given an array with n elements, can you sort this array in ascending order using only one of the following operations?
+
+Swap two elements.
+Reverse one sub-segment.
+Input Format 
+The first line contains a single integer, n , which indicates the size of the array. 
+The next line contains n integers separated by spaces.
