@@ -3,6 +3,7 @@ import java.util.*;
 public class Main {
 
     static int commonChild(String s1, String s2) {
+        // the slow version, but it's fun to do the recursive calls...
 
         if ((s1.length() == 0) || (s2.length() == 0)) { return 0; }
 
@@ -43,43 +44,6 @@ public class Main {
                 s2_lcs = commonChild(s1.substring(0, s1.length() - 1), s2);
                 return Math.max(s1_lcs, s2_lcs);
             }
-
-
-
-
-//            if (s1_c2 >= 0) {
-//                System.out.println("P1");
-//                // shorten string to the point of that last character, run, put val into s1_lcs
-//                s1_sub = s1.substring(0, s1_c2);
-//                s2_sub = s2.substring(0, s2.length()-1);
-//                s1_lcs = 1 + commonChild(s1_sub, s2_sub);       // add 1 because we've taken off the common last char
-//            } else {
-//                System.out.println("P2");
-//                s1_lcs = 0;
-//            }
-//            if (s2_c1 >= 0) {
-//                // shorten string to the point of that last character, run, put val into s1_lcs
-//                System.out.println("P3");
-//                s1_sub = s1.substring(0, s1.length()-1);
-//                s2_sub = s2.substring(0, s2_c1);
-//                s2_lcs = 1 + commonChild(s1_sub, s2_sub);       // add 1 because we've taken off the common last char
-//            } else {
-//                System.out.println("P4");
-//                s2_lcs = 0;
-//            }
-//
-//            if ((s1_c2 < 0) && (s2_c1 < 0)) {
-//                // just lop the last character off each string and try again
-//                System.out.println("P5");
-//                System.out.println(commonChild(s1.substring(0, s1.length()-1), s2.substring(0, s2.length()-1)));
-//                return commonChild(s1.substring(0, s1.length()-1), s2.substring(0, s2.length()-1));
-//            } else {
-//                System.out.println("P6");
-//                System.out.println(s1_lcs);
-//                System.out.println(s2_lcs);
-//                System.out.println(Math.max(s1_lcs, s2_lcs));
-//                return Math.max(s1_lcs, s2_lcs);
-//            }
 
         }
 
